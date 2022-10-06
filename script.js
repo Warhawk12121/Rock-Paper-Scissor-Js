@@ -1,10 +1,4 @@
-/*
-For UI
-Buttons needed for User Input
 
-
-
-*/
 function getPCchoice(){
   const choices=["rock","paper","scissor"];
   const ch=Math.floor(Math.random()*3)
@@ -14,7 +8,7 @@ function getPCchoice(){
 function checkWinner(){
   if(h>=5)
   {
-      console.log("\nUser has 5 points, PC Wins the game!!!");
+      console.log("\nUser has 5 points, User Wins the game!!!");
       document.getElementById("winner").innerText="User has 5 points, PC Wins the game!!!";
       btn1.disabled=true;
       btn2.disabled=true;
@@ -126,6 +120,7 @@ const div=document.querySelector('.results');
 const btn1=document.querySelector('#rock');
 const btn2=document.querySelector('#paper');
 const btn3=document.querySelector('#scissor');
+const ref=document.querySelector('#refresh')
 
 let h=0,pc=0;
 document.getElementById("user").innerHTML=h;
@@ -134,19 +129,4 @@ document.getElementById("pc").innerHTML=pc;
 btn1.addEventListener('click',()=>playRound('rock',getPCchoice().toLowerCase()));
 btn2.addEventListener('click',()=>playRound('paper',getPCchoice().toLowerCase()));
 btn3.addEventListener('click',()=>playRound('scissor',getPCchoice().toLowerCase()));
-
-if(h==5)
-{
-  document.getElementById("winner").innerHTML="User has 5 points, PC Wins the game!!!";
-  btn1.disabled=true;
-  btn2.disabled=true;
-  btn3.disabled=true;
-
-}
-else if(pc==5)
- { 
-  document.getElementById("winner").innerHTML="Pc has 5 points, PC Wins the game!!!";
-  btn1.disabled=true;
-  btn2.disabled=true;
-  btn3.disabled=true;
- }
+ref.addEventListener('click',()=>window.location.reload());

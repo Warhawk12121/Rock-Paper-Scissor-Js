@@ -3,26 +3,35 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #ff4b69;
-   
+    
+    background: #2851A6 url("http://i.stack.imgur.com/spmUM.gif") left repeat-x;
+    background-size: auto 65%;
+    background-position: bottom;
+    font-family: 'Vanilla Extract', sans-serif;                                                                           
 }
 #results{
     margin:20px;
     font-weight: bold;
     font-size: large;
 }
-
+h1{
+    font-family: 'Games', sans-serif;
+    font-weight: lighter;
+    font-size: xx-large;
+}
 .score{
     margin: 20px;
     font-size: x-large;
 }
 button{
-    border-radius: 8px;
+    border-radius: 4px;
+    font-size: 50px;
+    margin: 10px;
 }
 
 #winner{
-    font-size: xx-large;
-    font-weight: bold;
+    font-family: 'Games', sans-serif;
+    font-size: x-large;
     font-style: italic;
-    color: #2929e7;
+    color: #27f503;
 }
