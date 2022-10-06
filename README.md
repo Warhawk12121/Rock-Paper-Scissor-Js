@@ -6,8 +6,9 @@ Live Preview: https://warhawk12121.github.io/Rock-Paper-Scissor-Js/
 HTML, JavaScript
 
 # Current-Version
-Only works in Console
+User can play with buttons.
+Game of 5 rounds.
 
 # Future Version
-Game with GUI 
+Better UI
 
