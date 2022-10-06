@@ -14,15 +14,15 @@ function getPCchoice(){
 
 function playRound(playerSelection, computerSelection) {
 
-      const res=document.createElement('p');
+      
       
 
       if(playerSelection==computerSelection)
         {
           console.log("Player Chose "+playerSelection.toUpperCase()+"\nPc Chose "+computerSelection.toUpperCase());
           console.log("\nIts a Draw");
-          res.textContent=("Player Chose "+playerSelection.toUpperCase()+"\nPc Chose "+computerSelection.toUpperCase()+"\nIts a Draw");
-          div.appendChild(res);
+          document.getElementById("results").innerText="Player Chose "+playerSelection.toUpperCase()+"\nPc Chose "+computerSelection.toUpperCase()+"\nIts a Draw";
+          
           return "Draw";
         }
       
@@ -32,16 +32,16 @@ function playRound(playerSelection, computerSelection) {
             {
               console.log("Player Chose "+playerSelection.toUpperCase()+"\nPc Chose "+computerSelection.toUpperCase());
               console.log("\nPlayer Wins! Rock beats Scissor");
-              res.textContent=("Player Chose "+playerSelection.toUpperCase()+"\nPc Chose "+computerSelection.toUpperCase()+"\nPlayer Wins! Rock beats Scissor");
-              div.appendChild(res);
+              document.getElementById("results").innerText="Player Chose "+playerSelection.toUpperCase()+"\nPc Chose "+computerSelection.toUpperCase()+"\nPlayer Wins! Rock beats Scissor";
+              
               return "Player";
             }
           else if(computerSelection=="paper")
             {
               console.log("Player Chose "+playerSelection.toUpperCase()+"\nPc Chose "+computerSelection.toUpperCase());
               console.log("\nPC Wins! Paper beats Rock");
-              res.textContent=("Player Chose "+playerSelection.toUpperCase()+"\nPc Chose "+computerSelection.toUpperCase()+"\nPC Wins! Paper beats Rock");
-              div.appendChild(res);
+              document.getElementById("results").innerText="Player Chose "+playerSelection.toUpperCase()+"\nPc Chose "+computerSelection.toUpperCase()+"\nPC Wins! Paper beats Rock";
+              
               return "PC";
             }
       }
@@ -52,16 +52,16 @@ function playRound(playerSelection, computerSelection) {
             {
               console.log("Player Chose "+playerSelection.toUpperCase()+"\nPc Chose "+computerSelection.toUpperCase());
               console.log("\nPC Wins! Rock beats Scissor");
-              res.textContent=("Player Chose "+playerSelection.toUpperCase()+"\nPc Chose "+computerSelection.toUpperCase()+"\nPC Wins! Rock beats Scissor");
-              div.appendChild(res);
+              document.getElementById("results").innerText="Player Chose "+playerSelection.toUpperCase()+"\nPc Chose "+computerSelection.toUpperCase()+"\nPC Wins! Rock beats Scissor";
+              
               return "PC";
             }
           else if(computerSelection=="paper")
             {
               console.log("Player Chose "+playerSelection.toUpperCase()+"\nPc Chose "+computerSelection.toUpperCase());
               console.log("\nPlayer Wins! Scissor beats Paper");
-              res.textContent=("Player Chose "+playerSelection.toUpperCase()+"\nPc Chose "+computerSelection.toUpperCase()+"\nPlayer Wins! Scissor beats Paper");
-              div.appendChild(res);
+              document.getElementById("results").innerText="Player Chose "+playerSelection.toUpperCase()+"\nPc Chose "+computerSelection.toUpperCase()+"\nPlayer Wins! Scissor beats Paper";
+              
               return "Player";
             }
       }
@@ -72,16 +72,16 @@ function playRound(playerSelection, computerSelection) {
             {
               console.log("Player Chose "+playerSelection.toUpperCase()+"\nPc Chose "+computerSelection.toUpperCase());
               console.log("\nPlayer Wins! Paper beats Rock");
-              res.textContent=("Player Chose "+playerSelection.toUpperCase()+"\nPc Chose "+computerSelection.toUpperCase()+"\nPlayer Wins! Paper beats Rock");
-              div.appendChild(res);
+              document.getElementById("results").innerText="Player Chose "+playerSelection.toUpperCase()+"\nPc Chose "+computerSelection.toUpperCase()+"\nPlayer Wins! Paper beats Rock";
+              
               return "Player";
             }
           else if(computerSelection=="scissor")
             {
               console.log("Player Chose "+playerSelection.toUpperCase()+"\nPc Chose "+computerSelection.toUpperCase());
               console.log("\nPC Wins! Scissor beats Paper");
-              res.textContent=("Player Chose "+playerSelection.toUpperCase()+"\nPc Chose "+computerSelection.toUpperCase()+"\nPC Wins! Scissor beats Paper");
-              div.appendChild(res);
+              document.getElementById("results").innerText="Player Chose "+playerSelection.toUpperCase()+"\nPc Chose "+computerSelection.toUpperCase()+"\nPC Wins! Scissor beats Paper";
+              
               return "PC";
             }
       }
@@ -100,14 +100,10 @@ function Game(){
     {
         let playerSelection;
 
-        // const btn1=document.querySelector('#Rock');
-        // const btn2=document.querySelector('#Paper');
-        // const btn3=document.querySelector('#Scissor');
-
-        // btn1.addEventListener('click',pchoice('Rock'))
-        // btn2.addEventListener('click',pchoice('Paper'))
-        // btn3.addEventListener('click',pchoice('Scissor'))
-
+        // btn1.addEventListener('click',()=>playRound('rock',getPCchoice().toLowerCase()));
+        // btn2.addEventListener('click',()=>playRound('paper',getPCchoice().toLowerCase()));
+        // btn3.addEventListener('click',()=>playRound('scissor',getPCchoice().toLowerCase()));
+        
         let computerSelection = getPCchoice();
         winner=playRound(playerSelection.toLowerCase(), computerSelection.toLowerCase());
         if(winner=="Player")
@@ -126,14 +122,12 @@ function Game(){
       console.log("PC has 5 points, PC Wins the game!!!")
 
 }
-
-// Game()
-
  const div=document.querySelector('.results');
  const btn1=document.querySelector('#rock');
  const btn2=document.querySelector('#paper');
  const btn3=document.querySelector('#scissor');
-  
+
+ // Game()
  btn1.addEventListener('click',()=>playRound('rock',getPCchoice().toLowerCase()));
  btn2.addEventListener('click',()=>playRound('paper',getPCchoice().toLowerCase()));
  btn3.addEventListener('click',()=>playRound('scissor',getPCchoice().toLowerCase()));
