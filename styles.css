@@ -3,10 +3,10 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
     background: #2851A6 url("http://i.stack.imgur.com/spmUM.gif") left repeat-x;
     background-size: auto 65%;
     background-position: bottom;
+    min-height: 80vh;
     font-family: 'Vanilla Extract', sans-serif;                                                                           
 }
 #results{
@@ -33,5 +33,6 @@ button{
     font-family: 'Games', sans-serif;
     font-size: x-large;
     font-style: italic;
+    padding-bottom: 5px;
     color: #27f503;
 }

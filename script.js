@@ -9,7 +9,7 @@ function checkWinner(){
   if(h>=5)
   {
       console.log("\nUser has 5 points, User Wins the game!!!");
-      document.getElementById("winner").innerText="User has 5 points, PC Wins the game!!!";
+      document.getElementById("winner").innerText="User has 5 points, User Wins the game!!!";
       btn1.disabled=true;
       btn2.disabled=true;
       btn3.disabled=true;
@@ -110,10 +110,6 @@ function playRound(playerSelection, computerSelection) {
           }
     }
 
-}
-
-function pchoice(choice){
-  playerSelection=choice;
 }
 
 const div=document.querySelector('.results');
